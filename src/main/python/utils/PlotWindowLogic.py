@@ -3,8 +3,8 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from .PlotWindow import Ui_PlotWindow
 from .FFTWindowLogic import FFTWindowLogic
-from numpy import sin, cos, fft, arange, pi, savetxt
-from scipy import signal
+from numpy import sin, arange, pi, savetxt
+
 from scipy.signal import square, sawtooth, gausspulse
 
 from pyqtgraph import LinearRegionItem, SignalProxy
@@ -20,12 +20,6 @@ class PlotWindowLogic(Ui_PlotWindow):
         self.pushButtonViewFFT.clicked.connect(self.showFFT)
         self.pushButtonExportCSV.clicked.connect(self.exportDataset)
         self.FFTwindow = None
-
-
-   
-
-
-
 
     def PlotSin(self, amp, freq, phase):
 
