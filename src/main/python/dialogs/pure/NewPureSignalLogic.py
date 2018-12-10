@@ -6,7 +6,7 @@ import logging
 
 # relative imports
 from .NewPureSignal import Ui_PureSginalDialog
-from dialogs.utils.GraphicWidgetLogic import GraphicWidgetLogic
+from utils.GraphicWidgetLogic import GraphicWidgetLogic
 
 # logger configuration
 logging.basicConfig(level=logging.DEBUG)

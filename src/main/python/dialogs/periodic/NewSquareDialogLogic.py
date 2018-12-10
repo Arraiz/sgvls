@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
 from .NewSquareDialog import Ui_NewSquareDialog
 from utils.GraphicWidgetLogic import GraphicWidgetLogic
 from pyqtgraph import mkPen
@@ -29,6 +29,6 @@ class Ui_NewSuareDialogLogic(Ui_NewSquareDialog):
         self.PlotWindow = QtWidgets.QWidget()
         self.ui = GraphicWidgetLogic(self)
         self.ui.setupUi(self.PlotWindow)
-        self.ui.initializeBinds()
+        self.ui.init_binds()
         self.ui.plotSquare(self.doubleSpinBoxAmplitude.value(), self.doubleSpinBoxFrequency.value())
         return self.PlotWindow

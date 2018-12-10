@@ -26,7 +26,7 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
     def init_binds(self):
         # añadir plots
         self.pushButtonPlay.clicked.connect(self.play)
-        self.pushButton.clicked.connect(self.showFFT)
+        self.pushButton.clicked.connect(self.show_fft)
         setConfigOption('leftButtonPan', False)
         self.x = 0
         self.y = 0
@@ -65,11 +65,11 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
     def play(self):
         sd.play(self.y, self.FS, blocking=True)
 
-    def showFFT(self):
+    def show_fft(self):
         self.FFTwindow = QtWidgets.QWidget()
-        self.ui = GraphicWidgetLogicSpectrumLogic(self)
+        self.ui = GraphicWidgetLogicSpectrumLogic()
         self.ui.setupUi(self.FFTwindow)
-        self.ui.initializeBinds()
+        self.ui.init_binds()
 
         self.ui.PlotFFT(self.x, self.y, self.flag, self.amp)
 

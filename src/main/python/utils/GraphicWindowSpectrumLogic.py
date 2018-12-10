@@ -11,14 +11,14 @@ from PyQt5 import QtCore
 
 
 class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
-    def __init__(self, GraphicWidgetLogic):
+    def __init__(self):
         Ui_GraphicWindowSpectrum.__init__(self)
         self.FS = 48000
         self.x = 0
         self.y = 0
 
     # se inicializa el sistema de visualizado avanzado
-    def initializeBinds(self):
+    def init_binds(self):
         # añadir plots
 
         setConfigOption('leftButtonPan', False)

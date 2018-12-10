@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
 from .NewSawtoothDialog import Ui_NewSawtoothDialog
 from utils.GraphicWidgetLogic import GraphicWidgetLogic
 from pyqtgraph import mkPen
@@ -28,6 +28,6 @@ class Ui_NewSawtoothDialogLogic(Ui_NewSawtoothDialog):
         self.PlotWindow = QtWidgets.QWidget()
         self.ui = GraphicWidgetLogic(self)
         self.ui.setupUi(self.PlotWindow)
-        self.ui.initializeBinds()
+        self.ui.init_binds()
         self.ui.plotSawtooth(self.doubleSpinBoxAmplitude.value(),self.doubleSpinBoxFrequency.value())
         return self.PlotWindow
