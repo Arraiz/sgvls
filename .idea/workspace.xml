@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf3f242e-2943-4ba9-8034-9aa799c997f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSawtoothDialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSawtoothDialogLogic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSquareDialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSquareDialogLogic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/periodic/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/base/styles.qss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SignalVisualizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SignalVisualizer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/periodic/NewCosDialog.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/periodic/NewPureSignal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/periodic/NewPureSignalLogic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/periodic/NewSinDialog.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/periodic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dialogs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/utils/PlotWindowLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/utils/PlotWindowLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/workflow.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,14 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GraphicWidgetLogic.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GraphicWidgetLogic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+            <state relative-caret-position="270">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -70,7 +60,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/build/settings/base.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/devconf.md" />
         <option value="$PROJECT_DIR$/TODOS.txt" />
         <option value="$PROJECT_DIR$/workflow.md" />
@@ -84,6 +73,7 @@
         <option value="$PROJECT_DIR$/src/main/python/dialogs/utils/GraphicWidgetLogic.py" />
         <option value="$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py" />
         <option value="$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -151,6 +141,13 @@
               <item name="SignalVisualizer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SignalVisualizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SignalVisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -175,6 +172,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SignalVisualizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SignalVisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -274,17 +276,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2640625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1578125" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23262031" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23262031" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.21524064" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.28609625" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23395722" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -455,16 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/icons/Icon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/python/main.ui">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-80" />
@@ -614,13 +605,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrum.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/icons/Icon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+        <state relative-caret-position="270">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
         </state>
       </provider>
     </entry>
