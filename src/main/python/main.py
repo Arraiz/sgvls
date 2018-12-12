@@ -11,7 +11,7 @@ from main_ui import Ui_MainWindow
 from dialogs.pure.NewPureSignalLogic import Ui_NewPureSignalDialogLogic
 from dialogs.periodic.NewSquareDialogLogic import UiNewSuareDialogLogic
 from dialogs.periodic.NewSawtoothDialogLogic import UiNewSawtoothDialogLogic
-
+from dialogs.harmonic_synthesis.HarmonicSynthesisWidgetLogic import UiHarmonicSynthesisLogic
 # logger configuration
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger("MAIN")
@@ -48,9 +48,11 @@ class MainWindow(QMainWindow):
         self.ui.actionNew.triggered.connect(self.open_pure_signal_dialog)
         self.ui.actionSquare.triggered.connect(self.open_square_signal_dialog)
         self.ui.actionSawtooth.triggered.connect(self.open_saw_signal_dialog)
+        #MD change this name to Free Harmonic Synthesis
+        self.ui.actionFree.triggered.connect(self.open_hs_signal_dialog)
         log.info("header menu ok")
 
-    """DIALOGS"""
+    """DIALOGS PLACED HERE"""
 
     def open_test_dialog(self):
         self.window = QtWidgets.QDialog()
@@ -98,6 +100,21 @@ class MainWindow(QMainWindow):
         self.windows[len(self.windows) - 1].raise_()
         # @TODO delete windows from list when 'ok' or 'cancel' buttons are pressed
 
+
+    def open_hs_signal_dialog(self):
+        log.info("harmonic synthesis opened")
+        self.window = QtWidgets.QDialog()
+        self.interface = UiHarmonicSynthesisLogic()
+        self.interface.setupUi(self.window)
+        self.interface.setup_binds()
+        self.interface.pushButtonPlot.clicked.connect(self.open_plot_and_close_window)
+        log.info("window added to list")
+        self.windows.append(self.window)
+        self.windows[len(self.windows) - 1].show()
+        self.windows[len(self.windows) - 1].activateWindow()
+        self.windows[len(self.windows) - 1].raise_()
+        # @TODO delete windows from list when 'ok' or 'cancel' buttons are pressed
+
     def open_plot_and_close_window(self):
         log.info("plot window added to list")
         plot_window = self.interface.generate_plot()
@@ -106,6 +123,10 @@ class MainWindow(QMainWindow):
         self.plotWindows[len(self.plotWindows) - 1].activateWindow()
         self.plotWindows[len(self.plotWindows) - 1].raise_()
         self.window.hide()
+
+
+    """LIVE WINDOW MONITOR GO HERE"""
+
 
 
 if __name__ == '__main__':

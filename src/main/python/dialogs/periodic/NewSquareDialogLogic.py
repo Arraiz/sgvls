@@ -1,11 +1,12 @@
 from PyQt5 import QtWidgets
-from .NewSquareDialog import Ui_NewSquareDialog
-from utils.GraphicWidgetLogic import GraphicWidgetLogic
 from pyqtgraph import mkPen
 from numpy import arange, pi
 from scipy.signal import square
 
 import logging
+
+from utils.GraphicWidgetLogic import GraphicWidgetLogic
+from .NewSquareDialog import Ui_NewSquareDialog
 # logger configuration
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger("NEW_SQUARE_SIGNAL")
