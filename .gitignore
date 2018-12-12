@@ -127,3 +127,5 @@ dmypy.json
 
 #mac executable
 rw.SignalVisualizer.dmg
+
+.idea/workspace.xml

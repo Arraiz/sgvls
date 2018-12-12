@@ -8,7 +8,7 @@ from scipy.signal import square
 import logging
 # logger configuration
 logging.basicConfig(level=logging.DEBUG)
-log = logging.getLogger("NEW_PURE_SIGNAL")
+log = logging.getLogger("NEW_SQUARE_SIGNAL")
 
 
 class UiNewSuareDialogLogic(Ui_NewSquareDialog):
