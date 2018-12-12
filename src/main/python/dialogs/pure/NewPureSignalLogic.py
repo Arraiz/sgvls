@@ -29,15 +29,15 @@ class Ui_NewPureSignalDialogLogic(Ui_PureSginalDialog):
         self.doubleSpinBoxAmplitude.valueChanged.connect(self.update)
         self.doubleSpinBoxFrequency.valueChanged.connect(self.update)
         self.doubleSpinBoxPhase.valueChanged.connect(self.update)
-        #@TODO make background color readed  freaded from a conf file
+        # @TODO make background color readed  freaded from a conf file
         self.PreviewPlot.setBackground(background="w")
 
     def update(self):
         log.info("plot updated")
         self.y_axis = self.doubleSpinBoxAmplitude.value() * sin(
             2 * pi * self.doubleSpinBoxFrequency.value() * self.x_axis + (self.doubleSpinBoxPhase.value() * 2 * pi))
-        self.labelFormula.setText("%.2fsin(2π%.2ft+%.2fπ)" % (
-        self.doubleSpinBoxAmplitude.value(), self.doubleSpinBoxFrequency.value(), self.doubleSpinBoxPhase.value()))
+        self.labelFormula.setText("%.2fsin(2π%.2ft+%.2fπ)" % (self.doubleSpinBoxAmplitude.value()
+                                                            , self.doubleSpinBoxFrequency.value(), self.doubleSpinBoxPhase.value()))
         self.PreviewPlot.clear()
         self.PreviewPlot.plot(self.x_axis, self.y_axis, pen=mkPen('b', width=1))
 

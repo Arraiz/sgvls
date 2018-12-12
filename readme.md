@@ -15,6 +15,9 @@
 - third run the app in dev mode
         
         fbs run
+- Somethimes there is usefull to create aliases making the development more friendly
+
+        /<path>/<to>/<proyect>/SignalVisualizer/src/main/python/main.py
         
         
  ##Compiling for platforms
