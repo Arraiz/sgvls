@@ -1,18 +1,23 @@
 from fbs_runtime.application_context import ApplicationContext, cached_property
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtCore import Qt,QUrl
+from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout, QMainWindow,QDialog
 
+from PyQt5 import uic
 import sys
+#import requests
+
 import logging
 
 
-# MD Place here your custom imports
 from main_ui import Ui_MainWindow
+
+
+#MD Place here your custom imports
 from dialogs.pure.NewPureSignalLogic import Ui_NewPureSignalDialogLogic
 from dialogs.periodic.NewSquareDialogLogic import UiNewSuareDialogLogic
 from dialogs.periodic.NewSawtoothDialogLogic import UiNewSawtoothDialogLogic
 from dialogs.harmonic_synthesis.HarmonicSynthesisWidgetLogic import UiHarmonicSynthesisLogic
-# logger configuration
+#logger configuration
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger("MAIN")
 
@@ -37,7 +42,7 @@ class MainWindow(QMainWindow):
         self.window = None
         self.windows = []
         self.interface = None
-        # MD ^ global variables go here
+        # ^ global variables go here
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
@@ -55,12 +60,12 @@ class MainWindow(QMainWindow):
     """DIALOGS PLACED HERE"""
 
     def open_test_dialog(self):
-        self.window = QtWidgets.QDialog()
+        self.window = QDialog()
         self.window.show()
 
     def open_pure_signal_dialog(self):
         log.info("pure opened")
-        self.window = QtWidgets.QDialog()
+        self.window = QDialog()
         self.interface = Ui_NewPureSignalDialogLogic()
         self.interface.setupUi(self.window)
         self.interface.setup_binds()
@@ -74,7 +79,7 @@ class MainWindow(QMainWindow):
 
     def open_square_signal_dialog(self):
         log.info("square opened")
-        self.window = QtWidgets.QDialog()
+        self.window = QDialog()
         self.interface = UiNewSuareDialogLogic()
         self.interface.setupUi(self.window)
         self.interface.setup_binds()
@@ -88,7 +93,7 @@ class MainWindow(QMainWindow):
 
     def open_saw_signal_dialog(self):
         log.info("saw opened")
-        self.window = QtWidgets.QDialog()
+        self.window = QDialog()
         self.interface = UiNewSawtoothDialogLogic()
         self.interface.setupUi(self.window)
         self.interface.setup_binds()
@@ -103,7 +108,7 @@ class MainWindow(QMainWindow):
 
     def open_hs_signal_dialog(self):
         log.info("harmonic synthesis opened")
-        self.window = QtWidgets.QDialog()
+        self.window = QDialog()
         self.interface = UiHarmonicSynthesisLogic()
         self.interface.setupUi(self.window)
         self.interface.setup_binds()
@@ -126,6 +131,7 @@ class MainWindow(QMainWindow):
 
 
     """LIVE WINDOW MONITOR GO HERE"""
+
 
 
 
