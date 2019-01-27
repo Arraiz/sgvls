@@ -120,6 +120,8 @@ class MainWindow(QMainWindow):
         self.windows[len(self.windows) - 1].raise_()
         # @TODO delete windows from list when 'ok' or 'cancel' buttons are pressed
 
+
+
     def open_plot_and_close_window(self):
         log.info("plot window added to list")
         plot_window = self.interface.generate_plot()
