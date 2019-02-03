@@ -30,7 +30,8 @@ class Ui_GraphicWindow(object):
 
     def retranslateUi(self, GraphicWindow):
         _translate = QtCore.QCoreApplication.translate
-        GraphicWindow.setWindowTitle(_translate("GraphicWindow", "GraphicWindow"))
+        #HACK! to make the title dinamyc
+        #GraphicWindow.setWindowTitle(_translate("GraphicWindow", "GraphicWindow"))
         self.pushButtonPlay.setText(_translate("GraphicWindow", "Play"))
         self.pushButton.setText(_translate("GraphicWindow", "View Spectrum"))
 

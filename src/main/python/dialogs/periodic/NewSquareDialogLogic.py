@@ -37,6 +37,7 @@ class UiNewSuareDialogLogic(Ui_NewSquareDialog):
         log.info("generating final plot")
         self.plot_window = QtWidgets.QWidget()
         self.graph_widget = GraphicWidgetLogic()
+        self.plot_window.setWindowTitle(str(self.doubleSpinBoxAmplitude.value()) + ' sqaure (2·π ' + str(self.doubleSpinBoxFrequency.value()) + ')')
         self.graph_widget.setupUi(self.plot_window)
         self.graph_widget.init_binds()
         self.graph_widget.plotSquare(self.doubleSpinBoxAmplitude.value(), self.doubleSpinBoxFrequency.value())

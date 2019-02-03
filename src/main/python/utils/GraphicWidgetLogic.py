@@ -20,7 +20,8 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.y = 0
         self.freq = 0
         self.amp = 0
-        self.flag = "PURE"
+        self.flag = "DEFAULT"
+
 
     # se inicializa el sistema de visualizado avanzado
     def init_binds(self):
@@ -62,11 +63,14 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
 
         self.zoomedPlot.sigRangeChanged.connect(self.updateRegion)
 
+
+
     def play(self):
         sd.play(self.y, self.FS, blocking=True)
 
-    def show_fft(self):
+    def show_fft(self,title="undefined"):
         self.FFTwindow = QtWidgets.QWidget()
+        self.FFTwindow.setWindowTitle(title)
         self.ui = GraphicWidgetLogicSpectrumLogic()
         self.ui.setupUi(self.FFTwindow)
         self.ui.init_binds()

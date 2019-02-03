@@ -4,10 +4,11 @@ from pyqtgraph.Point import Point
 from numpy import sin, cos, fft, arange, pi, savetxt, linspace, zeros
 from scipy import signal
 from scipy.signal import square, sawtooth, gausspulse
-from scipy.fftpack import fft as scipyfft
+from scipy import fftpack
 from pyqtgraph import mkPen, setConfigOption
 
 from PyQt5 import QtCore
+
 
 
 class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
@@ -84,33 +85,22 @@ class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
         self.zoomedPlot.plot(self.hX, self.hY, pen=self.penB)
 
     # con el flag decidiremos que tipo de FFT plotear
-    def PlotFFT(self, xArray, yArray, flag="PURE", amplitude=0):
+    def PlotFFT(self, xArray, yArray, flag="DEFAULT", amplitude=0):
         self.x = xArray
         self.y = yArray
         if(flag == 'DEFAULT'):
-            self.X = linspace(0, ((self.FS)/2), (self.FS)/2)
-            self.Y = abs(fft.rfft(self.y, self.FS-1))/len(self.X)/2
-            self.fullPlot.plot(self.X, self.Y, pen=self.penR)
-            self.zoomedPlot.plot(self.X, self.Y, pen=self.penB)
-        elif (flag == 'PURE'):
+            # Number of samplepoints
+            N = 48000
+            # sample spacing
+            T = 1.0 / 48000
+            x = linspace(0.0, self.FS * (1/self.FS), self.FS)
+            y = sawtooth(50.0 * 2.0 * pi * x)
+            yf = fftpack.fft(yArray)
+            xf = linspace(0.0, 1.0 / (2.0 * (1/self.FS)), int(self.FS / 2))
+
+            # self.X = linspace(0, self.FS/2, self.FS/2)
+            # self.Y = abs(fft.rfft(self.y, self.FS-1))/len(self.X)/2
+            self.fullPlot.plot(xf, 2.0/self.FS * abs(yf[:self.FS//2]),pen=self.penR)
+            self.zoomedPlot.plot(xf, 2.0/self.FS * abs(yf[:self.FS//2]), pen=self.penB)
 
 
-            self.X = linspace(0, ((self.FS)/2), (self.FS)/2)
-            self.Y = abs(fft.rfft(self.y, self.FS-1))/len(self.X)/2
-            # self.Y = abs(fft.rfft(self.y, 512))/len(self.X)/2
-            
-
-
-            self.fullPlot.plot(self.X, self.Y, pen=self.penR)
-            self.zoomedPlot.plot(self.X, self.Y, pen=self.penB)
-
-       
-
-            # print("PURE")
-            # self.Y = abs(fft.rfft(self.y,self.FS))
-            # self.X = linspace(0, len(self.Y), len(self.Y))
-            # print(len(self.X))
-            # print(len(self.Y))
-
-            # self.fullPlot.plot(self.X, self.Y, pen=self.penR)
-            # self.zoomedPlot.plot(self.X, self.Y, pen=self.penB)

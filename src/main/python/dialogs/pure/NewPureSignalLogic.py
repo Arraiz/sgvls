@@ -44,8 +44,12 @@ class Ui_NewPureSignalDialogLogic(Ui_PureSginalDialog):
     def generate_plot(self, flag: str = "PURE"):
         log.info("generating final plot")
         self.plot_window = QtWidgets.QWidget()
+        title = str(self.doubleSpinBoxAmplitude.value())+'·cos( 2π· '+str(self.doubleSpinBoxFrequency.value())+'+'+str(self.doubleSpinBoxPhase.value())+' )'
+        self.plot_window.setWindowTitle(title)
         self.graph_widget = GraphicWidgetLogic()
         self.graph_widget.setupUi(self.plot_window)
+
+
         self.graph_widget.init_binds()
         self.graph_widget.PlotSin(self.doubleSpinBoxAmplitude.value(), self.doubleSpinBoxFrequency.value(),
                                   self.doubleSpinBoxPhase.value(), flag)

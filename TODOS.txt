@@ -1,2 +1,0 @@
-create setup.py
-integrate the app

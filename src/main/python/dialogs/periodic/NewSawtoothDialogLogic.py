@@ -37,6 +37,7 @@ class UiNewSawtoothDialogLogic(Ui_NewSawtoothDialog):
     def generate_plot(self):
         self.plot_window = QtWidgets.QWidget()
         self.graph_widget = GraphicWidgetLogic()
+        self.plot_window.setWindowTitle(str(self.doubleSpinBoxAmplitude.value())+' saw (2·π'+str( self.doubleSpinBoxFrequency.value())+')')
         self.graph_widget.setupUi(self.plot_window)
         self.graph_widget.init_binds()
         self.graph_widget.plotSawtooth(self.doubleSpinBoxAmplitude.value(), self.doubleSpinBoxFrequency.value())

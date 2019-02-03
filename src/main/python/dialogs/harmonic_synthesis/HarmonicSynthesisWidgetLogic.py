@@ -67,15 +67,15 @@ class UiHarmonicSynthesisLogic(Ui_FreeHarmSynthWidget):
         """THE FORMULA TO RULE THE WORRRRLDDDDD"""
         self.PlotPreview.clear()
         self.y_axis = (self.freq_bias * self.FreqVSlider.value() * cos(
-            2 * pi * self.x_axis * self.FreqSpinBox.value())) + (self.freq_bias * self.FreqVSlider_2.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_2.value())) + (self.freq_bias * self.FreqVSlider_3.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_3.value())) + (self.freq_bias * self.FreqVSlider_4.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_4.value())) + (self.freq_bias * self.FreqVSlider_5.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_5.value())) + (self.freq_bias * self.FreqVSlider_6.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_6.value())) + (self.freq_bias * self.FreqVSlider_7.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_7.value())) + (self.freq_bias * self.FreqVSlider_8.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_8.value())) + (self.freq_bias * self.FreqVSlider_9.value() * sin(
-            2 * pi * self.x_axis * self.FreqSpinBox_9.value())) + (self.freq_bias * self.FreqVSlider_10.value() * sin(
+            2 * pi * self.x_axis * self.FreqSpinBox.value())) + (self.freq_bias * self.FreqVSlider_2.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_2.value())) + (self.freq_bias * self.FreqVSlider_3.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_3.value())) + (self.freq_bias * self.FreqVSlider_4.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_4.value())) + (self.freq_bias * self.FreqVSlider_5.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_5.value())) + (self.freq_bias * self.FreqVSlider_6.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_6.value())) + (self.freq_bias * self.FreqVSlider_7.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_7.value())) + (self.freq_bias * self.FreqVSlider_8.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_8.value())) + (self.freq_bias * self.FreqVSlider_9.value() * cos(
+            2 * pi * self.x_axis * self.FreqSpinBox_9.value())) + (self.freq_bias * self.FreqVSlider_10.value() * cos(
             2 * pi * self.x_axis * self.FreqSpinBox_10.value()))
         self.PlotPreview.plotItem.plot(self.x_axis, self.y_axis, pen=mkPen('r', width=1))
 
