@@ -6,11 +6,12 @@ from pyqtgraph.Point import Point
 from numpy import sin, cos, fft, arange, pi, savetxt
 from scipy import signal
 from scipy.signal import square, sawtooth, gausspulse
+import pyqtgraph as pg
 from pyqtgraph import mkPen, setConfigOption
 
 from PyQt5 import QtCore
 
-import sounddevice as sd
+#import sounddevice as sd
 
 
 class GraphicWidgetLogic(Ui_GraphicWindow):
@@ -28,6 +29,7 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         # añadir plots
         self.pushButtonPlay.clicked.connect(self.play)
         self.pushButton.clicked.connect(self.show_fft)
+        # pg.setConfigOptions(useOpenGL=True)
         setConfigOption('leftButtonPan', False)
         self.x = 0
         self.y = 0
@@ -66,11 +68,12 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
 
 
     def play(self):
-        sd.play(self.y, self.FS, blocking=True)
+        pass
+        #sd.play(self.y, self.FS, blocking=True)
 
     def show_fft(self,title="undefined"):
         self.FFTwindow = QtWidgets.QWidget()
-        self.FFTwindow.setWindowTitle(title)
+        # self.FFTwindow.setWindowTitle(title)
         self.ui = GraphicWidgetLogicSpectrumLogic()
         self.ui.setupUi(self.FFTwindow)
         self.ui.init_binds()

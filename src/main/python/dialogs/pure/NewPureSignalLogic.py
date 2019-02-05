@@ -49,7 +49,7 @@ class Ui_NewPureSignalDialogLogic(Ui_PureSginalDialog):
         self.graph_widget = GraphicWidgetLogic()
         self.graph_widget.setupUi(self.plot_window)
 
-
+        flag="DEFAULT"
         self.graph_widget.init_binds()
         self.graph_widget.PlotSin(self.doubleSpinBoxAmplitude.value(), self.doubleSpinBoxFrequency.value(),
                                   self.doubleSpinBoxPhase.value(), flag)
