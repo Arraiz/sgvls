@@ -84,5 +84,18 @@ class UiHarmonicSynthesisLogic(Ui_FreeHarmSynthWidget):
         self.graph_widget = GraphicWidgetLogic()
         self.graph_widget.setupUi(self.plot_window)
         self.graph_widget.init_binds()
+        title='Freqs: '+str(
+            self.FreqSpinBox.value())+','+str(
+            self.FreqSpinBox_2.value())+','+str(
+            self.FreqSpinBox_3.value())+','+str(
+            self.FreqSpinBox_4.value())+','+str(
+            self.FreqSpinBox_5.value())+','+str(
+            self.FreqSpinBox_6.value())+','+str(
+            self.FreqSpinBox_7.value())+','+str(
+            self.FreqSpinBox_8.value())+','+str(
+            self.FreqSpinBox_9.value())+','+str(
+            self.FreqSpinBox_10.value())
+
+        self.graph_widget.freq_label.setText(title)
         self.graph_widget.plotHarmonic(self.x_axis, self.y_axis)
         return self.plot_window

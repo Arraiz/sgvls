@@ -24,6 +24,7 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.flag = "DEFAULT"
 
 
+
     # se inicializa el sistema de visualizado avanzado
     def init_binds(self):
         # añadir plots

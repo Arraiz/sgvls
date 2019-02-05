@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/GraphicWidget.ui'
+# Form implementation generated from reading ui file 'src/ui/GraphicWidget.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -11,10 +11,15 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_GraphicWindow(object):
     def setupUi(self, GraphicWindow):
         GraphicWindow.setObjectName("GraphicWindow")
-        GraphicWindow.resize(935, 567)
+        GraphicWindow.resize(937, 546)
         self.verticalLayout = QtWidgets.QVBoxLayout(GraphicWindow)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.freq_label = QtWidgets.QLabel(GraphicWindow)
+        self.freq_label.setText("")
+        self.freq_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.freq_label.setObjectName("freq_label")
+        self.verticalLayout.addWidget(self.freq_label)
         self.pushButtonPlay = QtWidgets.QPushButton(GraphicWindow)
         self.pushButtonPlay.setObjectName("pushButtonPlay")
         self.verticalLayout.addWidget(self.pushButtonPlay)
@@ -30,8 +35,7 @@ class Ui_GraphicWindow(object):
 
     def retranslateUi(self, GraphicWindow):
         _translate = QtCore.QCoreApplication.translate
-        #HACK! to make the title dinamyc
-        #GraphicWindow.setWindowTitle(_translate("GraphicWindow", "GraphicWindow"))
+        GraphicWindow.setWindowTitle(_translate("GraphicWindow", "GraphicWindow"))
         self.pushButtonPlay.setText(_translate("GraphicWindow", "Play"))
         self.pushButton.setText(_translate("GraphicWindow", "View Spectrum"))
 

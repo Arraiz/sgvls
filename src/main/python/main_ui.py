@@ -110,7 +110,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Signal BETA-LIZER"))
+        self.label.setText(_translate("MainWindow", "v.0.1"))
         self.menuSignal_Visualizer.setTitle(_translate("MainWindow", "Signal Visualizer"))
         self.menuGenerate.setTitle(_translate("MainWindow", "Generate"))
         self.menuPeriodic_Known_Signal.setTitle(_translate("MainWindow", "Periodic Known Signal"))
