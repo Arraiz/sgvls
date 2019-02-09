@@ -3,7 +3,7 @@ from .GraphicWindowSpectrumLogic import GraphicWidgetLogicSpectrumLogic
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pyqtgraph import SignalProxy, LinearRegionItem, InfiniteLine
 from pyqtgraph.Point import Point
-from numpy import sin, cos, fft, arange, pi, savetxt
+from numpy import sin, cos, fft, arange, pi, savetxt,random
 from scipy import signal
 from scipy.signal import square, sawtooth, gausspulse
 import pyqtgraph as pg
@@ -47,7 +47,7 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.region.setZValue(10)
 
         self.vb = self.zoomedPlot.vb
-        self.region.setRegion([1000, 2000])
+        self.region.setRegion([0, 1])
 
         self.fullPlot.addItem(self.region, ignoreBounds=True)
         # pg.dbg()
@@ -58,6 +58,7 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.zoomedPlot.addItem(self.vLine, ignoreBounds=True)
         self.zoomedPlot.addItem(self.hLine, ignoreBounds=True)
 
+
         # signal para capturar evento de raton
         # proxy = SignalProxy(self.zoomedPlot.scene().sigMouseMoved, rateLimit=60, slot=self.mouseMoved)
 
@@ -65,7 +66,14 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.region.sigRegionChanged.connect(self.update)
 
         self.zoomedPlot.sigRangeChanged.connect(self.updateRegion)
+        self.fullPlot.setMouseEnabled(False,False)
 
+
+        self.fullPlot.setLabel('bottom','Tiempo (s)')
+        self.fullPlot.setLabel('left', 'Amplitud')
+
+        self.zoomedPlot.setLabel('bottom','Tiempo (s) ')
+        self.zoomedPlot.setLabel('left', 'Amplitud')
 
 
     def play(self):
@@ -87,11 +95,15 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
 
     def updateRegion(self, window, viewRange):
         rgn = viewRange[0]
+
         self.region.setRegion(rgn)
 
     def update(self):
         self.region.setZValue(10)
+
         minX, maxX = self.region.getRegion()
+        if minX < 0:
+            minX = 0
         self.zoomedPlot.setXRange(minX, maxX, padding=0)
 
     def mouseMoved(self, evt):
@@ -110,28 +122,46 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.freq = freq
 
         self.x = arange(0, 1, 1 / self.FS)
-        self.y = (amp / 10) * sin(2 * pi * freq * self.x + (phase * pi))
+        self.y = (amp ) * sin(2 * pi * freq * self.x + (phase * pi))
 
         self.fullPlot.plot(self.x, self.y, pen=self.penR)
         self.zoomedPlot.plot(self.x, self.y, pen=self.penB)
+
+        self.zoomedPlot.setXRange(0,max(self.x),padding=0)
+        self.fullPlot.setXRange(0, max(self.x), padding=0)
+
+        self.zoomedPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
+        self.fullPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
 
     def plotSawtooth(self, amp, freq):
         self.amp = amp
         self.freq = freq
         self.Fs: int = 44100
         self.x = arange(0, 1, 1 / self.Fs)
-        self.y = (amp / 10) * sawtooth(2 * pi * freq * self.x)
+        self.y = (amp ) * sawtooth(2 * pi * freq * self.x)
         self.fullPlot.plot(self.x, self.y, pen=self.penR)
         self.zoomedPlot.plot(self.x, self.y, pen=self.penB)
+
+        self.zoomedPlot.setXRange(0,max(self.x),padding=0)
+        self.fullPlot.setXRange(0, max(self.x), padding=0)
+
+        self.zoomedPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
+        self.fullPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
 
     def plotSquare(self, amp, freq):
         self.amp = amp
         self.freq = freq
         self.Fs: int = 44100
         self.x = arange(0, 1, 1 / self.Fs)
-        self.y = (amp / 10) * square(2 * pi * freq * self.x)
+        self.y = (amp ) * square(2 * pi * freq * self.x)
         self.fullPlot.plot(self.x, self.y, pen=self.penR)
         self.zoomedPlot.plot(self.x, self.y, pen=self.penB)
+
+        self.zoomedPlot.setXRange(0,max(self.x),padding=0)
+        self.fullPlot.setXRange(0, max(self.x), padding=0)
+
+        self.zoomedPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
+        self.fullPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
 
     def plotGpulse(self, amp, freq):
         self.amp = amp
@@ -142,10 +172,32 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.fullPlot.plot(self.x, self.y, pen=self.penR)
         self.zoomedPlot.plot(self.x, self.y, pen=self.penB)
 
+        self.zoomedPlot.setXRange(0,max(self.x),padding=0)
+        self.fullPlot.setXRange(0, max(self.x), padding=0)
+
+        self.zoomedPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
+        self.fullPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
+
     def plotHarmonic(self, x_array, y_array):
         self.x = x_array
         self.y = y_array
         self.fullPlot.plot(x_array, y_array, pen=self.penR)
         self.zoomedPlot.plot(x_array, y_array, pen=self.penB)
+
+        self.zoomedPlot.setXRange(0,max(self.x),padding=0)
+        self.fullPlot.setXRange(0, max(self.x), padding=0)
+
+        self.zoomedPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
+        self.fullPlot.vb.setLimits(xMin=min(self.x),xMax=max(self.x),yMin=min(self.y),yMax=max(self.y))
+
+    def plot_white_noise(self):
+        self.x = self.x = arange(0, 1, 1 / self.FS)
+        self.y=3*random.randn(self.FS)
+        self.fullPlot.plot(self.x, self.y, pen=self.penR)
+        self.zoomedPlot.plot(self.x, self.y, pen=self.penB)
+        self.zoomedPlot.setXRange(0,max(self.x),padding=0)
+        self.fullPlot.setXRange(0, max(self.x), padding=0)
+        self.zoomedPlot.vb.setLimits(xMin=-0.1,xMax=1,yMin=min(self.y),yMax=max(self.y))
+        self.fullPlot.vb.setLimits(xMin=-0.1,xMax=1,yMin=min(self.y)-0.1,yMax=max(self.y))
 
 

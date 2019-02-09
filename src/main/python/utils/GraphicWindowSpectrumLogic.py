@@ -34,7 +34,7 @@ class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
         self.penB = mkPen('b')
         self.penR = mkPen('r')
         self.region = LinearRegionItem()
-        self.region.setZValue(10)
+        self.region.setZValue(1)
 
         self.vb = self.zoomedPlot.vb
         self.region.setRegion([1000, 2000])
@@ -55,13 +55,25 @@ class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
         self.region.sigRegionChanged.connect(self.update)
         self.zoomedPlot.sigRangeChanged.connect(self.updateRegion)
 
+        self.fullPlot.setLabel('bottom','Amplitud')
+        self.fullPlot.setLabel('left', 'Frecuencia (Hz)')
+
+        self.zoomedPlot.setLabel('left','Frecuencia (Hz)')
+        self.zoomedPlot.setLabel('bottom', 'Amplitud')
+
+        self.fullPlot.setMouseEnabled(False,False)
+        self.zoomedPlot.setMouseEnabled(True,False)
+
+        # self.zoomedPlot.setXRange(0, self.FS/2, padding=0)
     def updateRegion(self, window, viewRange):
         rgn = viewRange[0]
         self.region.setRegion(rgn)
 
     def update(self):
         self.region.setZValue(10)
+        self.region.setBounds([0,self.FS/2])
         minX, maxX = self.region.getRegion()
+
         self.zoomedPlot.setXRange(minX, maxX, padding=0)
 
     def mouseMoved(self, evt):
@@ -78,29 +90,33 @@ class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
 
         # para este caso no calculamos nada simplemente hardcodeamos todo
 
-        self.hX = arange(0, 2000, 0.01)
-        self.hY = zeros(len(self.hX))
+        xf = arange(0, 2000, 0.01)
+        yf = zeros(len(xf))
 
-        self.fullPlot.plot(self.hX, self.hY, pen=self.penR)
-        self.zoomedPlot.plot(self.hX, self.hY, pen=self.penB)
+        self.fullPlot.plot(xf, yf, pen=self.penR)
+        self.zoomedPlot.plot(xf, yf, pen=self.penB)
+
+        # self.zoomedPlot.setXRange(0, max(xf), padding=0)
+        # self.fullPlot.setXRange(0, max(yf), padding=0)
+        #
+        # self.zoomedPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=min(yf) - 1, yMax=max(yf) + 1)
+        # self.fullPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=min(yf) - 1, yMax=max(yf) + 1)
 
     # con el flag decidiremos que tipo de FFT plotear
     def PlotFFT(self, xArray, yArray, flag="DEFAULT", amplitude=0):
         self.x = xArray
         self.y = yArray
         if(flag == 'DEFAULT'):
-            # Number of samplepoints
-            N = 48000
-            # sample spacing
-            T = 1.0 / 48000
-            x = linspace(0.0, self.FS * (1/self.FS), self.FS)
-            y = sawtooth(50.0 * 2.0 * pi * x)
+
             yf = fftpack.fft(yArray)
             xf = linspace(0.0, 1.0 / (2.0 * (1/self.FS)), int(self.FS / 2))
-
-            # self.X = linspace(0, self.FS/2, self.FS/2)
-            # self.Y = abs(fft.rfft(self.y, self.FS-1))/len(self.X)/2
-            self.fullPlot.plot(xf, 2.0/self.FS * abs(yf[:self.FS//2]),pen=self.penR)
+            self.fullPlot.plot(xf, 2.0/self.FS * abs(yf[:self.FS//2]),pen=self.penR,fillLevel=0)
             self.zoomedPlot.plot(xf, 2.0/self.FS * abs(yf[:self.FS//2]), pen=self.penB)
+
+            self.zoomedPlot.setXRange(0, max(xf), padding=0)
+            self.fullPlot.setXRange(0, max(yf), padding=0)
+            # #
+            self.zoomedPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=0, yMax=1)
+            self.fullPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=0, yMax=1)
 
 
