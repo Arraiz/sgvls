@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/SVenv" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (SignalVisualizer) (1)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

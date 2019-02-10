@@ -55,11 +55,11 @@ class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
         self.region.sigRegionChanged.connect(self.update)
         self.zoomedPlot.sigRangeChanged.connect(self.updateRegion)
 
-        self.fullPlot.setLabel('bottom','Amplitud')
-        self.fullPlot.setLabel('left', 'Frecuencia (Hz)')
+        self.fullPlot.setLabel('left','Amplitude')
+        self.fullPlot.setLabel('bottom', 'Frecuency (Hz)')
 
-        self.zoomedPlot.setLabel('left','Frecuencia (Hz)')
-        self.zoomedPlot.setLabel('bottom', 'Amplitud')
+        self.zoomedPlot.setLabel('bottom','Frecuency (Hz)')
+        self.zoomedPlot.setLabel('left', 'Amplitude')
 
         self.fullPlot.setMouseEnabled(False,False)
         self.zoomedPlot.setMouseEnabled(True,False)
@@ -114,9 +114,9 @@ class GraphicWidgetLogicSpectrumLogic (Ui_GraphicWindowSpectrum):
             self.zoomedPlot.plot(xf, 2.0/self.FS * abs(yf[:self.FS//2]), pen=self.penB)
 
             self.zoomedPlot.setXRange(0, max(xf), padding=0)
-            self.fullPlot.setXRange(0, max(yf), padding=0)
+            self.fullPlot.setXRange(0, max(xf), padding=0)
             # #
-            self.zoomedPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=0, yMax=1)
-            self.fullPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=0, yMax=1)
+            self.zoomedPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=0, yMax=int(max(abs(yf)))*1.5)
+            self.fullPlot.vb.setLimits(xMin=min(xf), xMax=max(xf), yMin=0, yMax=int(max(abs(yf)))*1.5)
 
 

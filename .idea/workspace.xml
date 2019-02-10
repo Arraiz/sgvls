@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf3f242e-2943-4ba9-8034-9aa799c997f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/noise/NewNoiseDialogLogic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/noise/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/input_output/LoadFileDialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/input_output/LoadFileDialogLogic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordSoundDialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordSoundDialogLogic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordWindow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordWindowLogic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/dialogs/input_output/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SignalVisualizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SignalVisualizer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSawtoothDialogLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSawtoothDialogLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/base/styles.qss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/base/styles.qss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,23 +29,8 @@
       <file leaf-file-name="NewPureSignalLogic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-              <folding>
-                <element signature="e#17#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewNoiseDialogLogic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/python/dialogs/noise/NewNoiseDialogLogic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -48,8 +38,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/python/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="129" column="36" lean-forward="true" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+            <state relative-caret-position="259">
+              <caret line="143" column="50" lean-forward="true" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
               <folding>
                 <element signature="e#0#79#0" expanded="true" />
               </folding>
@@ -57,40 +47,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.qss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/base/styles.qss">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicWindowSpectrumLogic.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py">
+      <file leaf-file-name="RecordSoundDialogLogic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordSoundDialogLogic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="701">
+              <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
               <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphicWidgetLogic.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GraphicWidgetLogic.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+            <state relative-caret-position="146">
+              <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AxisItem.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SVenv/lib/python3.6/site-packages/pyqtgraph/graphicsItems/AxisItem.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="687" selection-start-line="687" selection-end-line="687" />
             </state>
           </provider>
         </entry>
@@ -144,13 +120,14 @@
         <option value="$PROJECT_DIR$/src/main/python/main_ui.py" />
         <option value="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSquareDialogLogic.py" />
         <option value="$PROJECT_DIR$/src/main/python/dialogs/harmonic_synthesis/HarmonicSynthesisWidgetLogic.py" />
-        <option value="$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py" />
         <option value="$PROJECT_DIR$/src/main/python/dialogs/periodic/NewSawtoothDialogLogic.py" />
-        <option value="$PROJECT_DIR$/src/main/python/main.py" />
         <option value="$PROJECT_DIR$/src/main/resources/base/styles.qss" />
         <option value="$PROJECT_DIR$/src/main/python/dialogs/noise/NewNoiseDialogLogic.py" />
-        <option value="$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py" />
+        <option value="$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py" />
         <option value="$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py" />
+        <option value="$PROJECT_DIR$/src/main/python/main.py" />
+        <option value="$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordSoundDialogLogic.py" />
+        <option value="$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py" />
       </list>
     </option>
   </component>
@@ -208,7 +185,35 @@
               <item name="SignalVisualizer" type="b2602c69:ProjectViewProjectNode" />
               <item name="SignalVisualizer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SignalVisualizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SignalVisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+              <item name="input_output" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SignalVisualizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SignalVisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+              <item name="pure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SignalVisualizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SignalVisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,17 +249,17 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/python" />
-      <recent name="$PROJECT_DIR$/src/main/resources/base" />
-      <recent name="$PROJECT_DIR$/src/main/python/dialogs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/python/dialogs" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/python/periodic" />
       <recent name="$PROJECT_DIR$/src/main/python/utils" />
-      <recent name="$PROJECT_DIR$/src/main/python/dialogs/pure" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/python" />
+      <recent name="$PROJECT_DIR$/src/main/resources/base" />
+      <recent name="$PROJECT_DIR$/src/main/python/dialogs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -286,7 +291,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/SVenv/bin/python" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3.6" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -383,21 +388,28 @@
       <option name="project" value="LOCAL" />
       <updated>1549408834724</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added noise fixed graph scales and regions fixed amplitude problems">
+      <created>1549736063511</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1549736063511</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30023828" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26449564" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1890625" side_tool="true" weight="0.30347595" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40827587" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39448276" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8109375" weight="0.23586208" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.8109375" weight="0.2689655" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23310345" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -411,21 +423,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120589785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23229167" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23395722" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8109375" weight="0.14166667" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.1890625" side_tool="true" weight="0.30347595" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -437,7 +449,8 @@
     <MESSAGE value="fft fixed" />
     <MESSAGE value="deleted sounddevice" />
     <MESSAGE value="placeholders added to pure periodic and harmonic free" />
-    <option name="LAST_COMMIT_MESSAGE" value="placeholders added to pure periodic and harmonic free" />
+    <MESSAGE value="added noise fixed graph scales and regions fixed amplitude problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="added noise fixed graph scales and regions fixed amplitude problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -449,7 +462,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py</url>
-          <line>83</line>
+          <line>93</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -457,23 +470,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/build/settings/mac.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/python/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -619,9 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,9 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -642,23 +632,6 @@
             <caret line="3" selection-start-line="3" selection-end-line="3" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/python/main_ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="112" column="55" selection-start-line="112" selection-start-column="55" selection-end-line="112" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/python/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="129" column="36" lean-forward="true" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,9 +663,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-292">
           <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SVenv/lib/python3.6/site-packages/pyqtgraph/graphicsItems/AxisItem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10185">
+          <caret line="687" selection-start-line="687" selection-end-line="687" />
         </state>
       </provider>
     </entry>
@@ -706,39 +683,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVenv/lib/python3.6/site-packages/pyqtgraph/graphicsItems/AxisItem.py">
+    <entry file="file://$PROJECT_DIR$/src/main/python/main_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="687" selection-start-line="687" selection-end-line="687" />
+        <state relative-caret-position="-1228">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/python/dialogs/input_output/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordWindowLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/python/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="143" column="50" lean-forward="true" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#79#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/python/dialogs/pure/NewPureSignalLogic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/python/dialogs/input_output/RecordSoundDialogLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
           <folding>
-            <element signature="e#17#44#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWidgetLogic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+        <state relative-caret-position="146">
+          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/python/utils/GraphicWindowSpectrumLogic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

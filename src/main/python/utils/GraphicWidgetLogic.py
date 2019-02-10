@@ -3,15 +3,16 @@ from .GraphicWindowSpectrumLogic import GraphicWidgetLogicSpectrumLogic
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pyqtgraph import SignalProxy, LinearRegionItem, InfiniteLine
 from pyqtgraph.Point import Point
-from numpy import sin, cos, fft, arange, pi, savetxt,random
+import numpy as np
+from numpy import sin, cos, fft, arange, pi, savetxt,random,array,int16
 from scipy import signal
 from scipy.signal import square, sawtooth, gausspulse
 import pyqtgraph as pg
 from pyqtgraph import mkPen, setConfigOption
+import simpleaudio as sa
+#import pyaudio
 
-from PyQt5 import QtCore
 
-#import sounddevice as sd
 
 
 class GraphicWidgetLogic(Ui_GraphicWindow):
@@ -69,18 +70,27 @@ class GraphicWidgetLogic(Ui_GraphicWindow):
         self.fullPlot.setMouseEnabled(False,False)
 
 
-        self.fullPlot.setLabel('bottom','Tiempo (s)')
-        self.fullPlot.setLabel('left', 'Amplitud')
+        self.fullPlot.setLabel('bottom','Time (s)')
+        self.fullPlot.setLabel('left', 'Amplitude')
 
-        self.zoomedPlot.setLabel('bottom','Tiempo (s) ')
-        self.zoomedPlot.setLabel('left', 'Amplitud')
+        self.zoomedPlot.setLabel('bottom','Time (s) ')
+        self.zoomedPlot.setLabel('left', 'Amplitude')
 
 
     def play(self):
         pass
-        #sd.play(self.y, self.FS, blocking=True)
+        audio=self.y
+        if(self.y.dtype != 'int16'):
+            audio *= 32767 / np.max(np.abs(audio))
+        # convert to 16-bit data
+        audio = audio.astype(np.int16)
+        # start playback
+        play_obj = sa.play_buffer(audio, 1, 2, self.FS)
+        # wait for playback to finish before exiting
+        play_obj.wait_done()
 
     def show_fft(self,title="undefined"):
+
         self.FFTwindow = QtWidgets.QWidget()
         # self.FFTwindow.setWindowTitle(title)
         self.ui = GraphicWidgetLogicSpectrumLogic()

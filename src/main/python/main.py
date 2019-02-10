@@ -18,6 +18,7 @@ from dialogs.periodic.NewSquareDialogLogic import UiNewSuareDialogLogic
 from dialogs.periodic.NewSawtoothDialogLogic import UiNewSawtoothDialogLogic
 from dialogs.harmonic_synthesis.HarmonicSynthesisWidgetLogic import UiHarmonicSynthesisLogic
 from dialogs.noise.NewNoiseDialogLogic import Ui_NewNoiseDialogLogic
+from dialogs.input_output.RecordSoundDialogLogic import Ui_RecordSoundDialogLogic
 #logger configuration
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger("MAIN")
@@ -57,6 +58,7 @@ class MainWindow(QMainWindow):
         #MD change this name to Free Harmonic Synthesis
         self.ui.actionFree.triggered.connect(self.open_hs_signal_dialog)
         self.ui.actionWhite.triggered.connect(self.open_noise_signal_dialog)
+        self.ui.actionRecord.triggered.connect(self.open_record_dialog)
         log.info("header menu ok")
 
     """DIALOGS PLACED HERE"""
@@ -126,6 +128,20 @@ class MainWindow(QMainWindow):
         log.info("noise dialog opened")
         self.window = QDialog()
         self.interface = Ui_NewNoiseDialogLogic()
+        self.interface.setupUi(self.window)
+        self.interface.setup_binds()
+        self.interface.buttonBox.accepted.connect(self.open_plot_and_close_window)
+        log.info("window added to list")
+        self.windows.append(self.window)
+        self.windows[len(self.windows) - 1].show()
+        self.windows[len(self.windows) - 1].activateWindow()
+        self.windows[len(self.windows) - 1].raise_()
+        # @TODO delete windows from list when 'ok' or 'cancel' buttons are pressed
+
+    def open_record_dialog(self):
+        log.info("record dialog opened")
+        self.window = QDialog()
+        self.interface = Ui_RecordSoundDialogLogic()
         self.interface.setupUi(self.window)
         self.interface.setup_binds()
         self.interface.buttonBox.accepted.connect(self.open_plot_and_close_window)
